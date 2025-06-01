@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Week</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .intro-section {
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            padding: 100px 20px;
+            text-align: center;
+            color: #333;
+        }
+        .intro-section h2 {
+            font-size: 3em;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+        .intro-section p {
+            font-size: 1.4em;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .main-content {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            margin: 15px;
+            padding: 20px;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .product img:hover {
+            transform: scale(1.1);
+        }
+        .product h3 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 15px;
+        }
+        .product p {
+            font-size: 1.2em;
+            color: #c4c0c0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+        .contact-section {
+            background-color: #7e776d;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        .contact-section h3 {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-family: 'Georgia', serif;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .contact-info div {
+            font-size: 1.2em;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons li {
+            margin: 0 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 35px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f39c12;
+        }
+    
+        #shop {
+            display: none;
+        }
+    </style>
+    <script>
+        
+        function showShop() {
+            var shopSection = document.getElementById('shop');
+            shopSection.style.display = 'flex'; 
+        }
+
+        
+        function hideShop() {
+            var shopSection = document.getElementById('shop');
+            shopSection.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="Fashion (1).png" alt="Logo Fashion Week" width="150">
+        <h1>Fashion Week</h1>
+        <p>"Fashion Week: Tu estilo, nuestra inspiración."</p>
+    </header>
+
+    <nav>
+        <a href="index.html" onclick="hideShop()">Inicio</a>
+        <a href="Nosotros.html">Sobre nosotros</a>
+        <a href="javascript:void(0);" onclick="showShop()">Tienda</a>
+    </nav>
+
+    <section class="intro-section">
+        <h2>Bienvenidos a Fashion Week</h2>
+        <p>En Fashion Week nos especializamos en ropa elegante para todas las ocasiones. Descubre nuestro catálogo de productos y lleva tu estilo al siguiente nivel. ¡Cada prenda está diseñada para destacar tu elegancia y sofisticación!</p>
+    </section>
+
+    
+    <div class="main-content" id="shop">
+        <div class="product">
+            <img src="PRIMERA.jpg" alt="Producto 1">
+            <h3>Camisa de Estilo Casual</h3>
+            <p>$750</p>
+        </div>
+        <div class="product">
+            <img src="SEGUNDA.jpg" alt="Producto 2">
+            <h3>Pantalón Elegante</h3>
+            <p>$1,500</p>
+        </div>
+        <div class="product">
+            <img src="TERCERA.jpg" alt="Producto 3">
+            <h3>Vestido de Noche</h3>
+            <p>$2,500</p>
+        </div>
+        <div class="product">
+            <img src="CUARTA.jpg" alt="Producto 4">
+            <h3>Pantalón Elegante</h3>
+            <p>$900</p>
+        </div>
+        <div class="product">
+            <img src="QUINTA.jpg" alt="Producto 5">
+            <h3>Conjunto Elegante</h3>
+            <p>$2,500</p>
+        </div>
+        <div class="product">
+            <img src="SEXTA..jpg" alt="Producto 6">
+            <h3>Bikini             </h3>
+            <p>$690</p>
+        </div>
+
+        <div class="product">
+            <img src="SEPTIMA.jpg" alt="Producto 7">
+            <h3></h3>
+            <p>$2,300</p>
+        </div>
+
+
+        <div class="product">
+            <img src="OCTAVA.jpg" alt="Producto 8">
+            <h3></h3>
+            <p>$2,300</p>
+        </div>
+
+        <div class="product">
+            <img src="NOVENA.jpg" alt="Producto 9">
+            <h3></h3>
+            <p>$2,300</p>
+        </div>
+
+        <div class="product">
+            <img src="DECIMA.jpg" alt="Producto 10">
+            <h3></h3>
+            <p>$2,300</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <section class="contact-section">
+        <h3>Contáctanos</h3>
+        <div class="contact-info">
+            <div>
+                <h4>Dirección</h4>
+                <p>Av. de la Moda 123, Ciudad de la Elegancia</p>
+            </div>
+            <div>
+                <h4>Teléfono</h4>
+                <p>(123) 456-7890</p>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <p>contacto@fashionweek.com</p>
+            </div>
+        </div>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/FashionWeek" target="_blank">🔵</a></li>
+            <li><a href="https://twitter.com/FashionWeek" target="_blank">🐦</a></li>
+            <li><a href="https://www.instagram.com/FashionWeek" target="_blank">📸</a></li>
+            <li><a href="mailto:contacto@fashionweek.com" target="_blank">✉️</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Week. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
